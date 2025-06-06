@@ -1,5 +1,121 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
 
-body{
-    background: white;
+.wrapper,
+button,
+#fire-position,
+input,
+#confirm-coor,
+.btn-wrapper {
+    position: relative;
+}
+
+.wrapper,
+.btn-wrapper {
+    display: flex;
+}
+
+.wrapper {
+    width: 500px;
+    width: 500px;
+    top: 10vh;
+    left: 25%;
+    flex-wrap: wrap;
+    anchor-name: --my-anchor;
+}
+
+.wrapper > * {
+    width: 50px;
+    height: 50px;
+    border: thin solid lightslategray;
+    background-color: lightgrey;
+}
+
+.wrapper,
+.left-numbers,
+.top-numbers,
+#fire-position {
+    background-color: lightslategray
+}
+
+.left-numbers,
+.top-numbers {
+    position: absolute;
+    width: 500px;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    font-size: 2em;
+    position-anchor: --my-anchor;
+}
+
+.top-numbers {
+    position-area: top center;
+    transform: translateY(1px);
+}
+
+.top-numbers > * {
+    border-bottom: none;
+}
+
+.left-numbers {
+    position-area: left center;
+    transform: translate(45.19%) rotate(0.25turn);
+}
+
+.left-numbers > * {
+    border-right: none;
+    rotate: -0.25turn;
+}
+
+.left-numbers > *,
+.top-numbers > * {
+    border: thin solid lightgray;
+    width: 50px;
+}
+
+.btn-wrapper {
+    width: 15vw;
+    height: 500px;
+    display: flex;
+    right: -80%;
+    top: -500px;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+ 
+input {
+    width: 2.5em;
+
+}
+
+#fire-position {
+    padding: 12px;
+}
+
+#confirm-coor {
+    left: 20%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border-color: rgb(175, 0, 0);
+    background-color: rgb(243, 10, 10);
+}
+
+#confirm-coor:hover {
+    box-shadow: 2px 8px 8px 4px rgba(0, 0, 0, 0.479),
+                1px 6px 20px 2px rgba(0, 0, 0, 0.411);
+}
+
+.btn {
+    text-align: center;
+    cursor: pointer;
+}
+
+#show-ships,
+#fire,
+#fire-position {
+    display: none;
 }
